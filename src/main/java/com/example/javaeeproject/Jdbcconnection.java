@@ -34,15 +34,20 @@ public class Jdbcconnection extends HttpServlet {
             System.out.println(e);
         }
         try{
-            Connection connection = DriverManager.getConnection(url,username,password);
+            Connection connection = DatabaseConnector.getConnection();
             System.out.println("passed2");
             System.out.println("connection established");
             Statement statement = connection.createStatement();
             //create sql quert to create a new database
-            String createDB = "create database teachers";
+            String createDB = "use teachers";
             statement.executeUpdate(createDB);
 
-            System.out.println("Database is created succcessfully");
+            System.out.println("Database is selected succcessfully");
+            String Selectall = "select * from teachers";
+            ResultSet resultSet  = statement.executeQuery(Selectall);
+            while(resultSet.next()){
+                System.out.println(resultSet);
+            }
 
             //close resources
             statement.close();
