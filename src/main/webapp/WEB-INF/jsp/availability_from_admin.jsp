@@ -65,9 +65,9 @@
                                 <a href="coupon_search.jsp" class="nav-item nav-link"><small>Search Coupon</small></a>
                                 <a href="coupon_delete.jsp" class="nav-item nav-link"><small>Delete Coupon</small></a>
                             </div>
-                            <a href="../../index.jsp" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">LogOut As<small>
+                            <a href="${pageContext.request.contextPath}/logout" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">LogOut As<small>
                                     <%  String A_name=(String)session.getAttribute("admin_name");  
-                                        out.print(A_name);  
+                                        out.print(A_name);
                                     %>  
                             </small><i class="fa fa-arrow-right ms-3"></i></a>
                         </div>
@@ -100,7 +100,7 @@
         <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="bg-white shadow" style="padding: 35px;">
-                    <form method="post" action="search_result_a.jsp">
+                    <form method="post" action="search_result_a">
                         <div class="row g-2">
                         <div class="col-md-10">
                             <h1>Show All Flight Details From Database</h1>
@@ -347,7 +347,7 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
-                            <a href="../../index.jsp">
+                            <a href="${pageContext.request.contextPath}/index.jsp">
                                 <h1 class="text-white text-uppercase mb-3">AirReserve</h1>
                             </a>
                             <p class="text-white mb-0">
@@ -377,9 +377,9 @@
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                                <a class="btn btn-link" href="login.jsp">Already a User</a>
-                                <a class="btn btn-link" href="register.jsp">New Registration</a>
-                                <a class="btn btn-link" href="admin_login.jsp">Admin Login</a>
+                                <a class="btn btn-link" href="login">Already a User</a>
+                                <a class="btn btn-link" href="register">New Registration</a>
+                                <a class="btn btn-link" href="admin_login">Admin Login</a>
                             </div>
                         </div>
                     </div>

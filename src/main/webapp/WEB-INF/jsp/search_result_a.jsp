@@ -3,6 +3,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="com.example.javaeeproject.db.DBConnector"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,7 +75,7 @@
                         <div class="col-lg-7 px-5 text-start">
                             <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                                 <i class="fa fa-envelope text-primary me-2"></i>
-                                <p class="mb-0">dtanmoy169@gmail.com</p>
+                                <p class="mb-0">ethio@gmail.com</p>
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2">
                                 <i class="fa fa-phone-alt text-primary me-2"></i>
@@ -100,14 +101,14 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="admin_login_pass.jsp" class="nav-item nav-link">Home</a>
-                                <a href="addflights.jsp" class="nav-item nav-link"><small>Add Flights</small></a>
-                                <a href="availability_from_admin.jsp" class="nav-item nav-link active"><small>Search Flights</small></a>
-                                <a href="coupon_add.jsp" class="nav-item nav-link"><small>Add Coupon</small></a>
-                                <a href="coupon_search.jsp" class="nav-item nav-link"><small>Search Coupon</small></a>
-                                <a href="coupon_delete.jsp" class="nav-item nav-link"><small>Delete Coupon</small></a>
+                                <a href="admin_login_pass" class="nav-item nav-link">Home</a>
+                                <a href="addflights" class="nav-item nav-link"><small>Add Flights</small></a>
+                                <a href="availability_from_admin" class="nav-item nav-link active"><small>Search Flights</small></a>
+                                <a href="coupon_add" class="nav-item nav-link"><small>Add Coupon</small></a>
+                                <a href="coupon_search" class="nav-item nav-link"><small>Search Coupon</small></a>
+                                <a href="coupon_delete" class="nav-item nav-link"><small>Delete Coupon</small></a>
                             </div>
-                            <a href="../../index.jsp" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block"><small>LogOut As</small><b>
+                            <a href="${pageContext.request.contextPath}/home" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block"><small>LogOut As</small><b>
                                     <%  String A_name=(String)session.getAttribute("admin_name");  
                                         out.print(A_name);  
                                     %></b>
@@ -127,7 +128,7 @@
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Search Flight Details</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="admin_login_pass.jsp">Home</a></li>
+                            <li class="breadcrumb-item"><a href="admin_login_pass">Home</a></li>
                             <li class="breadcrumb-item text-white" aria-current="page">Search Flight Details</li>
                         </ol>
                     </nav>
@@ -157,20 +158,9 @@
         <h2 align="center"><font><strong>Showing Search Results</strong></font></h2>
         <div class="scroll">
         <%
-            String flight_id = request.getParameter("flight_id");
-            String driverName = "com.mysql.jdbc.Driver";
-            String connectionUrl = "jdbc:mysql://localhost:3306/";
-            String dbName = "AIRRESERVE";
-            String userId = "root";
-            String password = "";
 
-            try {
-                Class.forName(driverName);
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
 
-                Connection connection = null;
+                Connection connection = DBConnector.getConnection();
                 Statement statement = null;
                 ResultSet resultSet = null;
         %>
@@ -203,11 +193,9 @@
                 <td><b>eco_class_price</b></td>
                 </tr>
                 <%
-                try{ 
-                    connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+                try{
                     statement=connection.createStatement();
                     String sql ="SELECT * FROM flight_details";
-
                     resultSet = statement.executeQuery(sql);
                     while(resultSet.next()){
                 %>
@@ -264,19 +252,17 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
-                            <a href="../../index.jsp">
+                            <a href="/index">
                                 <h1 class="text-white text-uppercase mb-3">AirReserve</h1>
                             </a>
-                            <p class="text-white mb-0">
-                                The website and backend mechanism are designed and developed by <a class="text-dark fw-medium" href="https://www.facebook.com/AlphaTanmoy/">Tanmoy Das</a> hope it's attractive and can be a demo of an actual airline system.
-                            </p>
+
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Baguihati, Brainware</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 82405 70310</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>dtanmoy169@gmail.com</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Addis Ababa,Ethiopia</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+251900000000</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>ethair@gmail.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -288,15 +274,15 @@
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="about.jsp">About Us</a>
-                                <a class="btn btn-link" href="contact.jsp">Contact Us</a>
-                                <a class="btn btn-link" href="about.jsp#team">Our Team</a>
+                                <a class="btn btn-link" href="about">About Us</a>
+                                <a class="btn btn-link" href="contact">Contact Us</a>
+                                <a class="btn btn-link" href="about#team">Our Team</a>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                                <a class="btn btn-link" href="login.jsp">Already a User</a>
-                                <a class="btn btn-link" href="register.jsp">New Registration</a>
-                                <a class="btn btn-link" href="admin_login.jsp">Admin Login</a>
+                                <a class="btn btn-link" href="login">Already a User</a>
+                                <a class="btn btn-link" href="register">New Registration</a>
+                                <a class="btn btn-link" href="admin_login">Admin Login</a>
                             </div>
                         </div>
                     </div>
@@ -306,14 +292,14 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="../../index.jsp"> AirReserve </a>, All Right Reserved. Designed By <a class="border-bottom">Tanmoy Das</a>
+                            &copy; <a class="border-bottom" href="/index"> AirReserve </a>, All Right Reserved. Designed By <a class="border-bottom">Group 1</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="../../index.jsp">Home</a>
-                                <a href="about.jsp">About</a>
-                                <a href="booking_error_msg.jsp">Booking</a>
-                                <a href="avaibility.jsp">Check Status</a>
+                                <a href="index">Home</a>
+                                <a href="about">About</a>
+                                <a href="booking_error_msg">Booking</a>
+                                <a href="avaibility">Check Status</a>
                             </div>
                         </div>
                     </div>

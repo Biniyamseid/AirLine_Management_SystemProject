@@ -6,31 +6,30 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-
+import java.sql.Connection;
+import java.sql.DriverManager;
 public class DatabaseConnector {
-    private static Connection connection = null;
-    private static final String url = "jdbc:mysql://127.0.0.1:3306/?user=Bini";
-    private static final String username = "Bini";
-    private static final String password = "Biniyam5982.";
+        private static Connection connection = null;
+        private static final String url = "jdbc:mysql://127.0.0.1:3306/AIRRESERVE";
+        private static final String username = "Bini";
+        private static final String password = "Biniyam5982.";
 
-    public static Connection getConnection() {
-        if (connection == null) {
+        public static Connection getConnection() {
             try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                System.out.println("passed 1");
-
-            } catch (ClassNotFoundException e) {
-                System.out.println(e);
-            }
-            try {
-                Connection connection = DriverManager.getConnection(url, username, password);
-                System.out.println("passed2");
-                System.out.println("connection established");
+                if (connection == null || connection.isClosed()) {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    connection = DriverManager.getConnection(url, username, password);
+                    System.out.println("connection is at first ");
+                    System.out.println(connection);
+                    System.out.println("Connection established");
+                }
             } catch (Exception e) {
+                System.out.println("error has occured");
                 System.out.println(e);
             }
+            System.out.println("at 11 first step");
+            return connection;
         }
-        return connection;
     }
-}
+
 

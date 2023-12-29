@@ -255,7 +255,7 @@ public class PageDispatcherServlet extends HttpServlet {
             default:
 //                showPage(request,response,"/WEB-INF/jsp/error.jsp");
 //                break;
-                showPage(request, response, "/WEB-INF/jsp/add_flight_success.jsp");
+                showPage(request, response, "/WEB-INF/jsp/index.jsp");
                 break;
 
         }
