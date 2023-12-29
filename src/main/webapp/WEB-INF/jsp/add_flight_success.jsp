@@ -8,8 +8,9 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    <jsp:include page="../includes/admin_page_header.jsp" />
+    <jsp:include page ="../includes/header_css_links.jsp"/>
 
-    <jsp:include page="../includes/header_css_links.jsp"/>
 
 
 </head>
@@ -88,9 +89,8 @@
                             </div>
                             <a href="${pageContext.request.contextPath}/"
                                class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block"><small>LogOut As</small><b>
-                                <% String A_name = (String) session.getAttribute("admin_name");
-                                    out.print(A_name);
-                                %></b>
+                                    <% String A_name = (String) session.getAttribute("admin_name"); %>
+                                <b><%= A_name %></b>
                                 <i class="fa fa-arrow-right ms-3"></i></a>
                         </div>
                     </nav>
@@ -99,10 +99,10 @@
         </div>
         <!-- Header End -->
 
-
         <!-- Page Header Start -->
-        <jsp:include page="../includes/admin_page_header.jsp">
+        <jsp:include page="../includes/admin_page_header.jsp"/>
         <!-- Page Header End -->
+
 
 
         <!-- Adding From -->
@@ -111,8 +111,7 @@
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">
                         <% String flight_id = (String) session.getAttribute("flight_id");
-                            out.print(flight_id);
-                        %> , Details Added Successfully</h6>
+                        %> , <b><%= flight_id %></b>Details Added Successfully</h6>
                     <h1 class="mb-5">Add A <span class="text-primary text-uppercase">New Flight</span></h1>
                 </div>
                 <div class="row g-5">
@@ -309,7 +308,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date">
-                                        <input type="date" class="form-control" placeholder="Date Of Flight"
+                                        <input id="checkin" type="date" class="form-control" placeholder="Date Of Flight"
                                                name="date_of_flight">
                                         <label for="checkin">Date Of Flight</label>
                                     </div>
@@ -430,7 +429,7 @@
 </div>
 <!-- JavaScript Libraries -->
 <jsp:include page="../includes/footer_js_links.jsp"/>
-
 </body>
+
 
 </html>

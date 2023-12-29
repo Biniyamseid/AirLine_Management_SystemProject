@@ -63,12 +63,17 @@ import java.io.IOException;
 
 })
 public class PageDispatcherServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String uri = request.getServletPath();
         switch (uri) {
             case "/":
                 showPage(request, response, "/WEB-INF/jsp/index.jsp");
                 break;
+            case "/response":
+                System.out.println("request is here");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/response");
+                requestDispatcher.forward(request,response);
             case "/home":
                 showPage(request,response,"/index.jsp");
             case "/login_page":
@@ -246,6 +251,11 @@ public class PageDispatcherServlet extends HttpServlet {
             case "/user_login_pass":
                 showPage(request, response, "/WEB-INF/jsp/user_login_pass.jsp");
 
+                break;
+            default:
+//                showPage(request,response,"/WEB-INF/jsp/error.jsp");
+//                break;
+                showPage(request, response, "/WEB-INF/jsp/add_flight_success.jsp");
                 break;
 
         }
