@@ -87,7 +87,7 @@
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Search Flights</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="admin_login_pass.jsp">Home</a></li>
+                            <li class="breadcrumb-item"><a href="admin_login_pass">Home</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Search Flights</li>
                         </ol>
                     </nav>
@@ -371,9 +371,9 @@
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="about.jsp">About Us</a>
-                                <a class="btn btn-link" href="contact.jsp">Contact Us</a>
-                                <a class="btn btn-link" href="about.jsp#team">Our Team</a>
+                                <a class="btn btn-link" href="about">About Us</a>
+                                <a class="btn btn-link" href="contact">Contact Us</a>
+                                <a class="btn btn-link" href="about#team">Our Team</a>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
@@ -389,14 +389,14 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="../../index.jsp"> AirReserve </a>, All Right Reserved. Designed By <a class="border-bottom">Tanmoy Das</a>
+                            &copy; <a class="border-bottom" href="${pageContext.request.contextPath}/index"> AirReserve </a>, All Right Reserved. Designed By <a class="border-bottom">Tanmoy Das</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="../../index.jsp">Home</a>
-                                <a href="about.jsp">About</a>
-                                <a href="booking_error_msg.jsp">Booking</a>
-                                <a href="avaibility.jsp">Check Status</a>
+                                <a href="${pageContext.request.contextPath}/index">Home</a>
+                                <a href="${pageContext.request.contextPath}/about">About</a>
+                                <a href="${pageContext.request.contextPath}/booking_error_msg">Booking</a>
+                                <a href="${pageContext.request.contextPath}/avaibility">Check Status</a>
                             </div>
                         </div>
                     </div>

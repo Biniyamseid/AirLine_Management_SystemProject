@@ -92,6 +92,15 @@ public class PageDispatcherServlet extends HttpServlet {
             case "/addflights":
                 showPage(request, response, "/WEB-INF/jsp/addflights.jsp");
                 break;
+            case "/updateflight":
+                showPage(request, response, "/WEB-INF/jsp/updateflight.jsp");
+                break;
+            case "/update_flight_failure":
+                showPage(request, response, "/WEB-INF/jsp/update_flight_failure.jsp");
+                break;
+            case "/update_flight_success":
+                showPage(request, response, "/WEB-INF/jsp/update_flight_success.jsp");
+                break;
             case "/addflights_failed":
                 showPage(request, response, "/WEB-INF/jsp/addflights_failed.jsp");
                 break;
@@ -255,6 +264,7 @@ public class PageDispatcherServlet extends HttpServlet {
             default:
 //                showPage(request,response,"/WEB-INF/jsp/error.jsp");
 //                break;
+                System.out.println(uri+"received this uri");
                 showPage(request, response, "/WEB-INF/jsp/index.jsp");
                 break;
 

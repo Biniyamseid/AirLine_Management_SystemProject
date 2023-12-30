@@ -17,7 +17,7 @@ public class DBInitializer {
                             "admin_name VARCHAR(10) PRIMARY KEY, " +
                             "admin_pass VARCHAR(10)) ENGINE=INNODB",
                     "INSERT INTO Admin_log (admin_name, admin_pass) " +
-                            "VALUES ('admin', 'admin'), ('Tanmoy', 'admin')",
+                            "VALUES ('admin', 'admin'), ('bini', 'bini')",
                     "CREATE TABLE IF NOT EXISTS flight_details (" +
                             "    flight_id VARCHAR(14) PRIMARY KEY, " +
                             "    flight_no VARCHAR(14), " +
