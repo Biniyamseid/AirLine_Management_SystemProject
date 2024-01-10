@@ -48,7 +48,7 @@ try
            Connection conn = DBConnector.getConnection();
            Statement st=conn.createStatement();
            int i=st.executeUpdate("insert into flight_details values('"+flight_id+"','"+flight_no+"','"+flight_name+"','"+from_city+"','"+to_city+"','"+date_of_flight+"','"+flight_arrival_time+"','"+flight_reach_time+"','"+duration+"',"+first_class_seat+","+first_class_seat_booked+","+first_class_seat_aval+","+buss_class_seat+","+buss_class_seat_booked+","+buss_class_seat_aval+","+eco_class_seat+","+eco_class_seat_booked+","+eco_class_seat_aval+","+first_class_price+","+buss_class_price+","+eco_class_price+")");
-            response.sendRedirect("add_flight_suucess");
+            response.sendRedirect("add_flight_success");
 
         }
         catch(Exception e)

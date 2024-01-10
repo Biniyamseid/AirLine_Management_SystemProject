@@ -38,11 +38,11 @@
                         <div class="col-lg-7 px-5 text-start">
                             <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                                 <i class="fa fa-envelope text-primary me-2"></i>
-                                <p class="mb-0">dtanmoy169@gmail.com</p>
+                                <p class="mb-0">EthioReserve@gmail.com</p>
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2">
                                 <i class="fa fa-phone-alt text-primary me-2"></i>
-                                <p class="mb-0">+91 82405 70310</p>
+                                <p class="mb-0">+25190000</p>
                             </div>
                         </div>
                         <div class="col-lg-5 px-5 text-end">
@@ -73,8 +73,8 @@
                             </div>
                             <a href="${pageContext.request.contextPath}/" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">LogOut As<small>
                                     <%  String U_name=(String)session.getAttribute("username");  
-                                        out.print(U_name);  
-                                    %>  
+                                        out.print(U_name);
+                                    %>
                             </small><i class="fa fa-arrow-right ms-3"></i></a>
                         </div>
                     </nav>
@@ -127,8 +127,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                        <iframe class="position-relative rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.163056890359!2d88.4260533154188!3d22.61038543727977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027589b4af1ba7%3A0xb7709326984255de!2sBrainware%20University%20Baguiati%20Admission%20Centre!5e0!3m2!1sen!2sin!4v1656563703291!5m2!1sen!2sin"
-                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3940.879070970584!2d38.795536999999996!3d8.983274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNTgnNTkuOCJOIDM4wrA0Nyc0My45IkU!5e0!3m2!1sen!2set!4v1704002736435!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">

@@ -7,18 +7,15 @@ import com.example.javaeeproject.db.DBConnector;
 import com.example.javaeeproject.model.User;
 
 public class UserDao {
-    private static Connection connection = null;
-    private static final String url = "jdbc:mysql://127.0.0.1:3306/AIRRESERVE";
-    private static final String username = "Bini";
-    private static final String password = "Biniyam5982.";
+    private static final Connection connection = DBConnector.getConnection();
 
 
     public void insertUser(User user) throws SQLException {
         try{
             PreparedStatement pstmt = connection.prepareStatement(
-                    "INSERT INTO user_details (fullname, username, password, mobileno, email_address, state, city, pincode) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"); {
+                    "INSERT INTO user_details (fullname, username, password, mobileno, email_address, state, city, pincode,profileImage) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?)"); {
             }
-            pstmt.setString(1, user.getFullName());
+            pstmt.setString(1, User.getFullName());
             pstmt.setString(2, user.getUserName());
             pstmt.setString(3, user.getPassword());
             pstmt.setString(4, "+" + user.getCountryCode() + " " + user.getPhno());
@@ -26,6 +23,7 @@ public class UserDao {
             pstmt.setString(6, user.getState());
             pstmt.setString(7, user.getCity());
             pstmt.setString(8, user.getPincod());
+            pstmt.setString( 9, User.getProfileImage());
             pstmt.executeUpdate();
         }catch (Exception e){
             System.out.println(e);
@@ -47,6 +45,7 @@ public class UserDao {
                     user.setState(rs.getString("state"));
                     user.setCity(rs.getString("city"));
                     user.setPincod(rs.getString("pincode"));
+                    user.setProfileImage(rs.getString("profileImage"));
                     return user;
                 }
             }
@@ -68,4 +67,43 @@ public class UserDao {
             }
         }
     }
+
+    public void deleteUser(String username) throws SQLException {
+        try (Connection connection = DatabaseConnector.getConnection();
+             PreparedStatement pstmt = connection.prepareStatement("DELETE FROM user_details WHERE username = ?")) {
+
+            pstmt.setString(1, username);
+            pstmt.executeUpdate();
+        }
+    }
+    public void updateProfileImage(String username, String imagePath) throws SQLException {
+        try (Connection connection = DBConnector.getConnection();
+             PreparedStatement pstmt = connection.prepareStatement("UPDATE user_details SET profileImage = ? WHERE username = ?")) {
+
+            pstmt.setString(1, imagePath);
+            pstmt.setString(2, username);
+
+            pstmt.executeUpdate();
+        }
+    }
+
+
+    public void updateUser(User user) throws SQLException {
+        try (Connection connection = DBConnector.getConnection();
+             PreparedStatement pstmt = connection.prepareStatement(
+                     "UPDATE user_details SET fullname = ?, password = ?, email_address = ?, state = ?, city = ?, pincode = ?, profileImage = ? WHERE username = ?")) {
+
+            pstmt.setString(1, User.getFullName());
+            pstmt.setString(2, user.getPassword());
+            pstmt.setString(3, user.getEmail_address());
+            pstmt.setString(4, user.getState());
+            pstmt.setString(5, user.getCity());
+            pstmt.setString(6, user.getPincod());
+            pstmt.setString(7, User.getProfileImage());
+            pstmt.setString(8, user.getUserName());
+
+            pstmt.executeUpdate();
+        }
+    }
+
 }

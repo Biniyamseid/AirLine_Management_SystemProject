@@ -54,20 +54,21 @@
     <div class="container-xxl bg-white p-0">
         <!-- Header Start -->
         <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+            <!-- Spinner Start -->
+            <div id="spinner"
+                 class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
             </div>
+            <!-- Spinner End -->
         </div>
-        <!-- Spinner End -->
-
         <!-- Header Start -->
         <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="../../index.jsp" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                        <h1 class="m-0 text-primary text-uppercase">AirReserve</h1>
+                    <a href="${pageContext.request.contextPath}/" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <h1 class="m-0 text-primary text-uppercase">EthioAir</h1>
                     </a>
                 </div>
                 <div class="col-lg-9">
@@ -79,7 +80,7 @@
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2">
                                 <i class="fa fa-phone-alt text-primary me-2"></i>
-                                <p class="mb-0">+91 82405 70310</p>
+                                <p class="mb-0">+2519000000</p>
                             </div>
                         </div>
                         <div class="col-lg-5 px-5 text-end">
@@ -93,7 +94,7 @@
                         </div>
                     </div>
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-                        <a href="../../index.jsp" class="navbar-brand d-block d-lg-none">
+                        <a href="${pageContext.request.contextPath}/" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary text-uppercase">AirReserve</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -102,17 +103,19 @@
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="admin_login_pass" class="nav-item nav-link">Home</a>
-                                <a href="addflights" class="nav-item nav-link"><small>Add Flights</small></a>
-                                <a href="availability_from_admin" class="nav-item nav-link active"><small>Search Flights</small></a>
-                                <a href="coupon_add" class="nav-item nav-link"><small>Add Coupon</small></a>
-                                <a href="coupon_search" class="nav-item nav-link"><small>Search Coupon</small></a>
-                                <a href="coupon_delete" class="nav-item nav-link"><small>Delete Coupon</small></a>
+                                <a href="addflights" class="nav-item nav-link active"><small>Add Flights</small></a>
+                                <a href="availability_from_admin" class="nav-item nav-link"><small>Search Flights</small></a>
+                                <a href="updateflight" class="nav-item nav-link"><small>update Flights</small></a>
+                                <a href="deleteflight" class="nav-item nav-link"><small>delete Flights</small></a>
+                                <%--                                <a href="coupon_add" class="nav-item nav-link"><small>Add Coupon</small></a>--%>
+                                <%--                                <a href="coupon_search" class="nav-item nav-link"><small>Search Coupon</small></a>--%>
+                                <%--                                <a href="coupon_delete" class="nav-item nav-link"><small>Delete Coupon</small></a>--%>
                             </div>
-                            <a href="${pageContext.request.contextPath}/home" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block"><small>LogOut As</small><b>
-                                    <%  String A_name=(String)session.getAttribute("admin_name");  
-                                        out.print(A_name);  
-                                    %></b>
-                            <i class="fa fa-arrow-right ms-3"></i></a>
+                            <a href="${pageContext.request.contextPath}/logout" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">LogOut As<small>
+                                <%  String A_name=(String)session.getAttribute("admin_name");
+                                    out.print(A_name);
+                                %>
+                            </small><i class="fa fa-arrow-right ms-3"></i></a>
                         </div>
                     </nav>
                 </div>
@@ -218,9 +221,9 @@
                     <td><center><%=resultSet.getString("eco_class_seat")%></center></td>
                     <td><center><%=resultSet.getString("eco_class_seat_booked")%></center></td>
                     <td><center><%=resultSet.getString("eco_class_seat_aval")%></center></td>
-                    <td><center>RS <%=resultSet.getString("first_class_price")%>/-</center></td>
-                    <td><center>RS <%=resultSet.getString("buss_class_price")%>/-</center></td>
-                    <td><center>Rs <%=resultSet.getString("eco_class_price")%>/-</center></td>
+                    <td><center><%=resultSet.getString("first_class_price")%>Birr</center></td>
+                    <td><center> <%=resultSet.getString("buss_class_price")%>Birr</center></td>
+                    <td><center> <%=resultSet.getString("eco_class_price")%>Birr</center></td>
                 </tr>
                 
                 <% 

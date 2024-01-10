@@ -9,24 +9,26 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <jsp:include page="WEB-INF/includes/header_css_links.jsp"/>
-    <script>   
-    function setClipboard(value) {
-    const tempInput = document.createElement("input");
-    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-    tempInput.value = value;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-        const a = document.getElementById('copy1').value;
-        alert("copied to clipboard!!");
-    }
+    <script>
+        function setClipboard(value) {
+            const tempInput = document.createElement("input");
+            tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+            tempInput.value = value;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            const a = document.getElementById('copy1').value;
+            alert("copied to clipboard!!");
+        }
     </script>
+
+
     <link rel="icon" href="img/title_logo.png" type="text/x-icon">
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container bg-white p-0">
         <!-- Header Start -->
         <jsp:include page="WEB-INF/includes/navbar.jsp" />
         <!-- Header End -->
@@ -106,13 +108,13 @@
 
 
         <!-- About Start -->
-        <div class="container-xxl py-5">
+        <div class="container py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">AirReserve</span></h1>
-                        <p class="mb-4">This is the demo system of Online Flight Booking methodology developed, designed and maintained by Tanmoy Das.</p>
+                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">EthioAir</span></h1>
+                        <p class="mb-4">This is the demo system of Online Flight Booking methodology developed, designed and maintained by Group 1 students in AAiT.</p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
@@ -522,6 +524,7 @@
     <jsp:include page="WEB-INF/includes/footer_js_links.jsp"/>
 
     <!-- Template Javascript -->
+
 
 </body>
 

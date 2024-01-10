@@ -49,7 +49,7 @@
         <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="bg-white shadow" style="padding: 35px;">
-                    <form method="post" action="search_success.jsp">
+                    <form method="post" action="search_success">
                         <div class="row g-2">
                         <div class="col-md-10">
                             <h1>Show All Flight Details From Database</h1>
@@ -74,7 +74,7 @@
                                 <div class="row g-3">
                                     <h3 class="mb-4 text-center">Search Flights<span class="text-primary text-uppercase"> <small>By Flight Number</small></span></h3>
                                     <h6 class="text-start text-primary text-center text-uppercase"> <small>Search Flights By Flight Number</small> </h6>
-                                     
+
                                     <div class="col-md-6">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="fname" name="flight_no" placeholder="Flight Number">
@@ -88,7 +88,6 @@
                             </form>
                         </div>
                     </div>
-                    
                     <div class="col-lg-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
                             <form method="post" action="search_flight_by_id">
@@ -108,7 +107,6 @@
                             </form>
                         </div>
                     </div>
-                    
                     <div class="col-lg-12">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
                             <form method="post" action="search_flight_by_fname">

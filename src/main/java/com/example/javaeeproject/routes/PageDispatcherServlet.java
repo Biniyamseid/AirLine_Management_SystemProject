@@ -74,8 +74,13 @@ public class PageDispatcherServlet extends HttpServlet {
                 System.out.println("request is here");
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/response");
                 requestDispatcher.forward(request,response);
+                break;
             case "/home":
                 showPage(request,response,"/index.jsp");
+                break;
+            case "/profile":
+                showPage(request,response,"/WEB-INF/jsp/profile.jsp");
+                break;
             case "/login_page":
                 showPage(request, response, "/WEB-INF/jsp/login.jsp");
                 break;
@@ -88,6 +93,16 @@ public class PageDispatcherServlet extends HttpServlet {
 
             case "/add_flight_validation":
                 showPage(request, response, "/WEB-INF/jsp/add_flight_validation.jsp");
+                break;
+            case "/delete_success":
+                showPage(request, response, "/WEB-INF/jsp/delete_success.jsp");
+                break;
+            case "/delete_failure":
+                showPage(request, response, "/WEB-INF/jsp/delete_failure.jsp");
+                break;
+
+            case "/deleteflight":
+                showPage(request, response, "/WEB-INF/jsp/deleteflight.jsp");
                 break;
             case "/addflights":
                 showPage(request, response, "/WEB-INF/jsp/addflights.jsp");

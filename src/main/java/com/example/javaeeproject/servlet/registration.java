@@ -28,11 +28,7 @@ import java.sql.*;
 
 @WebServlet("/registration")
 public class registration extends HttpServlet {
-//    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-//            throws ServletException, IOException {
-//        response.setContentType("text/html;charset=UTF-8");
-
-//    }
+//    protected void processRequest(HttpServletRequest request, HttpServletResponse
 protected void doGet(HttpServletRequest request, HttpServletResponse response){
     System.out.println("request is received");
 

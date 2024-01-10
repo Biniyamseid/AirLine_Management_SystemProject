@@ -35,13 +35,13 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="Enter Flight Number" name="flight_no">
+                                    <input type="text" class="form-control" placeholder="Enter Flight Number" name="flight_no" required>
                                     <label>Enter Flight Number</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <select class="form-select" name="flight_name" id="flight_name">
+                                    <select class="form-select" name="flight_name" id="flight_name" required>
                                         <option selected>Enter Flight Name</option>
                                         <option value="AirAsia India">AirAsia India</option>
                                         <option value="Air India">Air India</option>
@@ -71,7 +71,7 @@
 
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <select class="form-select" name="from_city" id="from_city">
+                                    <select class="form-select" name="from_city" id="from_city" required>
                                         <option selected>Departure City Name</option>
                                         <option value="Ahmedabad Airport - AMD">Ahmedabad Airport - AMD</option>
                                         <option value="Amritsar Airport - LUH">Amritsar Airport - LUH</option>
@@ -125,7 +125,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <select class="form-select" name="to_city" id="to_city">
+                                    <select class="form-select" name="to_city" id="to_city" required>
                                         <option selected>Arrival City Name</option>
                                         <option value="Ahmedabad Airport - AMD">Ahmedabad Airport - AMD</option>
                                         <option value="Amritsar Airport - LUH">Amritsar Airport - LUH</option>
@@ -179,7 +179,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating date">
-                                    <input type="date" class="form-control" placeholder="Date Of Flight" name="date_of_flight">
+                                    <input type="date" class="form-control" placeholder="Date Of Flight" name="date_of_flight" required>
                                     <label for="checkin">Date Of Flight</label>
                                 </div>
                             </div>
@@ -188,13 +188,13 @@
 
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="Enter Flight Departure Time HH:MM:SS" name="flight_arrival_time">
+                                    <input type="text" class="form-control" placeholder="Enter Flight Departure Time HH:MM:SS" name="flight_arrival_time" required>
                                     <label><small>Enter Flight Departure Time HH:MM:SS</small></label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="Enter Flight Arrival Time HH:MM:SS" id="frt" name="flight_reach_time">
+                                    <input type="text" class="form-control" placeholder="Enter Flight Arrival Time HH:MM:SS" id="frt" name="flight_reach_time" required>
                                     <label><small>Enter Flight Arrival Time HH:MM:SS</small></label>
                                 </div>
                             </div>
@@ -203,13 +203,13 @@
 
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="Enter First Class Seat" name="first_class_seat">
+                                    <input type="text" class="form-control" placeholder="Enter First Class Seat" name="first_class_seat" required>
                                     <label><small>Enter First Class Seat</small></label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="Enter First Class Seat Price" name="first_class_price">
+                                    <input type="text" class="form-control" placeholder="Enter First Class Seat Price" name="first_class_price" required>
                                     <label><small>Enter First Class Seat Price</small></label>
                                 </div>
                             </div>
@@ -218,13 +218,13 @@
 
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="Enter Business Class Seat" name="buss_class_seat">
+                                    <input type="text" class="form-control" placeholder="Enter Business Class Seat" name="buss_class_seat" required>
                                     <label><small>Enter Business Class Seat</small></label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="Enter Business Class Seat Price" name="buss_class_price">
+                                    <input type="text" class="form-control" placeholder="Enter Business Class Seat Price" name="buss_class_price" required>
                                     <label><small>Enter Business Class Seat Price</small></label>
                                 </div>
                             </div>
@@ -233,14 +233,14 @@
 
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="Enter Economy Class Seat" name="eco_class_seat">
+                                    <input type="text" class="form-control" placeholder="Enter Economy Class Seat" name="eco_class_seat" required>
                                     <label><small>Enter Economy Class Seat</small></label>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" placeholder="Enter Economy Class Seat Price" name="eco_class_price">
+                                    <input type="text" class="form-control" placeholder="Enter Economy Class Seat Price" name="eco_class_price" required>
                                     <label><small>Enter Economy Class Seat Price</small></label>
                                 </div>
                             </div>
@@ -255,10 +255,74 @@
 
             </div>
         </div>
-    </div>ate Form End -->
+    </div>
 
     <!-- Newsletter and Footer content similar to addflights.jsp -->
 </div>
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+    <div class="container pb-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="bg-primary rounded p-4">
+                    <a href="${pageContext.request.contextPath}/index.jsp">
+                        <h1 class="text-white text-uppercase mb-3">EthioAir</h1>
+                    </a>
+                    <p class="text-white mb-0">
+                        The website and backend mechanism are designed and developed by <a class="text-dark fw-medium" href="https://www.facebook.com/AlphaTanmoy/">Group 1</a> hope it's attractive and can be a demo of an actual airline system.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Addis Ababa,Ethiopia</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+251900000000</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>ethio@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="row gy-5 g-4">
+                    <div class="col-md-6">
+                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
+                        <a class="btn btn-link" href="about">About Us</a>
+                        <a class="btn btn-link" href="contact">Contact Us</a>
+                        <a class="btn btn-link" href="about#team">Our Team</a>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
+                        <a class="btn btn-link" href="login">Already a User</a>
+                        <a class="btn btn-link" href="register">New Registration</a>
+                        <a class="btn btn-link" href="admin_login">Admin Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="${pageContext.request.contextPath}/index"> EthioAir </a>, All Right Reserved. Designed By <a class="border-bottom">Group 1</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="${pageContext.request.contextPath}/index">Home</a>
+                        <a href="${pageContext.request.contextPath}/about">About</a>
+                        <a href="${pageContext.request.contextPath}/booking_error_msg">Booking</a>
+                        <a href="${pageContext.request.contextPath}/avaibility">Check Status</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
 
 <!-- JavaScript Libraries and Back to Top button similar to addflights.jsp -->
 </body>

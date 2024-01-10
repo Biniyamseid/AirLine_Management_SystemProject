@@ -6,13 +6,13 @@ import java.sql.Statement;
 public class DBInitializer {
 
     public static void main(String[] args) {
-        try (Connection connection = DBConnector.getConnection();
+        try (Connection connection = DBConnector.getConnectionInit();
              Statement statement = connection.createStatement()) {
 
             // Split SQL statements
             String[] sqlStatements = {
-                    "CREATE DATABASE IF NOT EXISTS AIRRESERVE",
-                    "USE AIRRESERVE",
+                    "CREATE DATABASE IF NOT EXISTS Ethioair2",
+                    "USE Ethioair2",
                     "CREATE TABLE IF NOT EXISTS Admin_log (" +
                             "admin_name VARCHAR(10) PRIMARY KEY, " +
                             "admin_pass VARCHAR(10)) ENGINE=INNODB",
@@ -49,7 +49,10 @@ public class DBInitializer {
                             "email_address VARCHAR(40), " +
                             "city VARCHAR(30), " +
                             "state VARCHAR(30), " +
-                            "pincode INT(10)) ENGINE=INNODB",
+                            "pincode INT(10), " +
+                            "profile_image VARCHAR(255) DEFAULT 'img/user1.jpg', " +  // Set default image file path
+                            "INDEX (username) " +
+                            ") ENGINE=INNODB",
                     "CREATE TABLE IF NOT EXISTS booking_details (" +
                             "username VARCHAR(14), " +
                             "flight_no VARCHAR(14), " +

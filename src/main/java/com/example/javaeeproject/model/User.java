@@ -2,7 +2,7 @@ package com.example.javaeeproject.model;
 
 
 public class User {
-    private String fullname;
+    private static String fullname;
     private String username;
     private String phno;
     private String countryCode;
@@ -11,7 +11,9 @@ public class User {
 
     private String city;
     private String pincode;
+
     private String state;
+    private static String profileImage;
 
 
     public User() {
@@ -19,8 +21,8 @@ public class User {
 
     }
 
-    public User(String fullname, String username, String email_address, String password, String countryCode, String city, String pincode, String state,String phno) {
-        this.fullname = fullname;
+    public User(String fullname, String username, String email_address, String password, String countryCode, String city, String pincode, String state,String phno,String profileImage) {
+        User.fullname = fullname;
         this.username = username;
         this.email_address = email_address;
         this.password = password;
@@ -29,6 +31,7 @@ public class User {
         this.pincode = pincode;
         this.state = state;
         this.phno =phno;
+        User.profileImage = profileImage;
     }
 
     public void setFullName(String fullname) {
@@ -36,7 +39,7 @@ public class User {
 
     }
 
-    public String getFullName() {
+    public static String getFullName() {
         return fullname;
     }
 
@@ -103,6 +106,18 @@ public class User {
 
     public String getState() {
         return state;
+    }
+
+    public static String getProfileImage() {
+        return profileImage;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setProfileImage(String profileImage) {
+        User.profileImage = profileImage;
     }
 }
 

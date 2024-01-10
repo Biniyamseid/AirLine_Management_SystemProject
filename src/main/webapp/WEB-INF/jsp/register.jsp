@@ -398,44 +398,39 @@
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <select class="form-select" name="state" id="state">
-                                                <option value="Andhra Pradesh">Samuel Godad</option>
-                                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar
-                                                    Islands
-                                                </option>
-                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                                <option value="Assam">Assam</option>
-                                                <option value="Bihar">Bihar</option>
-                                                <option value="Chandigarh">Chandigarh</option>
-                                                <option value="Chhattisgarh">Chhattisgarh</option>
-                                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
-                                                <option value="Daman and Diu">Daman and Diu</option>
-                                                <option value="Delhi">Delhi</option>
-                                                <option value="Lakshadweep">Lakshadweep</option>
-                                                <option value="Puducherry">Puducherry</option>
-                                                <option value="Goa">Goa</option>
-                                                <option value="Gujarat">Gujarat</option>
-                                                <option value="Haryana">Haryana</option>
-                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                                                <option value="Jharkhand">Jharkhand</option>
-                                                <option value="Karnataka">Karnataka</option>
-                                                <option value="Kerala">Kerala</option>
-                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                                <option value="Maharashtra">Maharashtra</option>
-                                                <option value="Manipur">Manipur</option>
-                                                <option value="Meghalaya">Meghalaya</option>
-                                                <option value="Mizoram">Mizoram</option>
-                                                <option value="Nagaland">Nagaland</option>
-                                                <option value="Odisha">Odisha</option>
-                                                <option value="Punjab">Punjab</option>
-                                                <option value="Rajasthan">Rajasthan</option>
-                                                <option value="Sikkim">Sikkim</option>
-                                                <option value="Tamil Nadu">Tamil Nadu</option>
-                                                <option value="Telangana">Telangana</option>
-                                                <option value="Tripura">Tripura</option>
-                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                                <option value="Uttarakhand">Uttarakhand</option>
-                                                <option value="West Bengal">West Bengal</option>
+                                                <option selected>Choose  Nearest Airport</option>
+                                                <option value="Addis Ababa Bole International Airport">Addis Ababa Bole International Airport</option>
+                                                <option value="Arba Minch Airport">Arba Minch Airport</option>
+                                                <option value="Asosa Airport">Asosa Airport</option>
+                                                <option value="Axum Airport">Axum Airport</option>
+                                                <option value="Awasa Airport">Awasa Airport</option>
+                                                <option value="Baco Airport">Baco Airport</option>
+                                                <option value="Bahir Dar Airport">Bahir Dar Airport</option>
+                                                <option value="Beica Airport">Beica Airport</option>
+                                                <option value="Bedele Airport">Bedele Airport</option>
+                                                <option value="Bulchi Airport">Bulchi Airport</option>
+                                                <option value="Dembidolo Airport">Dembidolo Airport</option>
+                                                <option value="Combolcha Airport">Combolcha Airport</option>
+                                                <option value="Aba Tenna Dejazmach Yilma International Airport">Aba Tenna Dejazmach Yilma International Airport</option>
+                                                <option value="Dodola Airport">Dodola Airport</option>
+                                                <option value="Gambela Airport">Gambela Airport</option>
+                                                <option value="Ghimbi Airport">Ghimbi Airport</option>
+                                                <option value="Ghinnir Airport">Ghinnir Airport</option>
+                                                <option value="Robe Airport">Robe Airport</option>
+                                                <option value="Gode Airport">Gode Airport</option>
+                                                <option value="Gondar Airport">Gondar Airport</option>
+                                                <option value="Gore Airport">Gore Airport</option>
+                                                <option value="Humera Airport">Humera Airport</option>
+                                                <option value="Jijiga Airport">Jijiga Airport</option>
+                                                <option value="Aba Segud Airport">Aba Segud Airport</option>
+                                                <option value="Kabri Dar Airport">Kabri Dar Airport</option>
+                                                <option value="Lalibela Airport">Lalibela Airport</option>
+                                                <option value="Nekemte Airport">Nekemte Airport</option>
+                                                <option value="Alula Aba Airport">Alula Aba Airport</option>
+                                                <option value="Tum Airport">Tum Airport</option>
+                                                <option value="Semera Airport">Semera Airport</option>
+                                                <option value="Sheikh Hussein Airport">Sheikh Hussein Airport</option>
+                                                <option value="Shilavo Airport">Shilavo Airport</option>
                                             </select>
                                             <label>Enter Your State Name</label>
                                         </div>
@@ -498,7 +493,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
                             <a href="../../index.jsp">
-                                <h1 class="text-white text-uppercase mb-3">AirReserve</h1>
+                                <h1 class="text-white text-uppercase mb-3">EthioAir</h1>
                             </a>
                             <p class="text-white mb-0">
                                 The website and backend mechanism are designed and developed by <a
