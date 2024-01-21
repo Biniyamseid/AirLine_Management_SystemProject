@@ -25,7 +25,7 @@ public class UpdateProfileServlet extends HttpServlet {
         String city = request.getParameter("city");
         String pincode = request.getParameter("pincode");
 
-        Part filePart = request.getPart("profileImage"); // Retrieve file part
+        Part filePart = request.getPart("profile_image"); // Retrieve file part
 
         UserDao userDao = new UserDao();
 

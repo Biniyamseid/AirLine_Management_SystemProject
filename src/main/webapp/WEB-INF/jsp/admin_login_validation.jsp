@@ -4,7 +4,7 @@
         String admin_name = request.getParameter("admin_name");   
         String admin_pass = request.getParameter("admin_pass");
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/AIRRESERVE?" + "user=root");    
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Ethioair2?" + "user=root");
         PreparedStatement pst = conn.prepareStatement("Select admin_name,admin_pass from admin_log where admin_name=? and admin_pass=?");
         pst.setString(1, admin_name);
         pst.setString(2, admin_pass);

@@ -59,7 +59,9 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response){
             user.setPincod(pincode);
             UserDao userDAO = new UserDao();
             userDAO.insertUser(user);
+            System.out.println(user+"user");
             username = user.getUserName();
+            System.out.println(username+"username");
             request.getSession().setAttribute("username", username);
 
             response.sendRedirect(request.getContextPath() +"/registration_success");
@@ -76,4 +78,3 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response){
         }
     }
 }
-

@@ -67,6 +67,7 @@
 package com.example.javaeeproject.servlet;
 
 import com.example.javaeeproject.model.User;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -95,7 +96,9 @@ public class LoginServlet extends HttpServlet {
             UserDao userDAO = new UserDao();
             try {
                 isValidUser = userDAO.validateUser(username, password);
+                System.out.println(isValidUser);
                 User user = userDAO.getUserByUsername(username);
+                System.out.println(user+"user");
 
                 // Set user data in the session
                 HttpSession session = request.getSession();

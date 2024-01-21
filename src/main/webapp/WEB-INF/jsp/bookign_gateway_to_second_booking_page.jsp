@@ -4,7 +4,7 @@
         String username = request.getParameter("username");   
         String flight_id = request.getParameter("flight_id");
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/AIRRESERVE?" + "user=root");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Ethioair2?" + "user=root");
         String ticket_type = request.getParameter("ticket_type");
         int no_of_seats = Integer.parseInt(request.getParameter("no_of_seats"));
         PreparedStatement buss_class_seat_aval = conn.prepareStatement("Select buss_class_seat_aval from flight_details");

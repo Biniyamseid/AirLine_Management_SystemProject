@@ -45,7 +45,7 @@
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Fly in Comfort</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Discover Your Dream Journey With Us</h1>
                                 <a href="availability" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Plane Availability</a>
-                                <a href="booking_error_msg" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book Plane Tickets</a>
+                                <a href="booking_error_msg" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Book Plane Tickets</a>
                             </div>
                         </div>
                     </div>

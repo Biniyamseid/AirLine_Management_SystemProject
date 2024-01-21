@@ -32,7 +32,7 @@
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="${pageContext.request.contextPath}/" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                        <h1 class="m-0 text-primary text-uppercase">AirReserve</h1>
+                        <h1 class="m-0 text-primary text-uppercase">Ethioair</h1>
                     </a>
                 </div>
                 <div class="col-lg-9">
@@ -59,7 +59,7 @@
                     </div>
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                         <a href="${pageContext.request.contextPath}/" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary text-uppercase">AirReserve</h1>
+                            <h1 class="m-0 text-primary text-uppercase">Ethioair</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
@@ -165,7 +165,7 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">AirReserve</span></h1>
+                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Ethioair</span></h1>
                         <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">

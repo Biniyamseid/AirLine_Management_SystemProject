@@ -38,7 +38,7 @@
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="../../index.jsp" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                        <h1 class="m-0 text-primary text-uppercase">AirReserve</h1>
+                        <h1 class="m-0 text-primary text-uppercase">Ethioair</h1>
                     </a>
                 </div>
                 <div class="col-lg-9">
@@ -65,7 +65,7 @@
                     </div>
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                         <a href="../../index.jsp" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary text-uppercase">AirReserve</h1>
+                            <h1 class="m-0 text-primary text-uppercase">Ethioair</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
@@ -115,7 +115,7 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">Sorry to say that!</h6>
-                    <h1 class="mb-5">You Need To <span class="text-primary text-uppercase">Register</span> Or <span class="text-primary text-uppercase">Login</span> Before You acn Access <span class="text-primary text-uppercase">AirReserve</span> Booking System</h1>
+                    <h1 class="mb-5">You Need To <span class="text-primary text-uppercase">Register</span> Or <span class="text-primary text-uppercase">Login</span> Before You acn Access <span class="text-primary text-uppercase">Ethioair</span> Booking System</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -176,7 +176,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
                             <a href="../../index.jsp">
-                                <h1 class="text-white text-uppercase mb-3">AirReserve</h1>
+                                <h1 class="text-white text-uppercase mb-3">Ethioair</h1>
                             </a>
                             <p class="text-white mb-0">
                                 The website and backend mechanism are designed and developed by <a class="text-dark fw-medium" href="https://www.facebook.com/AlphaTanmoy/">Tanmoy Das</a> hope it's attractive and can be a demo of an actual airline system.
@@ -217,7 +217,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="../../index.jsp"> AirReserve </a>, All Right Reserved. Designed By <a class="border-bottom">Tanmoy Das</a>
+                            &copy; <a class="border-bottom" href="../../index.jsp"> Ethioair </a>, All Right Reserved. Designed By <a class="border-bottom">Tanmoy Das</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">

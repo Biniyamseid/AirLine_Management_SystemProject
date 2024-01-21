@@ -45,7 +45,7 @@
                 </div>
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                     <a href="${pageContext.request.contextPath}/" class="navbar-brand d-block d-lg-none">
-                        <h1 class="m-0 text-primary text-uppercase">AirReserve</h1>
+                        <h1 class="m-0 text-primary text-uppercase">Ethioair</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -96,7 +96,7 @@
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
-                        <h6 class="section-title text-start text-primary text-uppercase">AIRRESERVE Admin Pannel</h6>
+                        <h6 class="section-title text-start text-primary text-uppercase">Ethioair Admin Pannel</h6>
                         <h1 class="mb-4">Admin <span class="text-primary text-uppercase">Dashboard</span></h1>
                         <p class="mb-4">You and go through Users responses and connectivity with the Links Below</p>
                         <div class="row g-3 pb-4">
