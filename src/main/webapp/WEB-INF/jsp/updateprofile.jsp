@@ -45,12 +45,13 @@
     <label for="pincode">Pincode:</label>
     <input type="text" id="pincode" name="pincode" value="<%= user.getPincod() %>" required><br>
 
-    <label for="profileImage">Profile Image:</label>
-    <input type="file" id="profileImage" name="profileImage"><br>
+    <label for="profile_image">Profile Image:</label>
+    <input type="file" id="profile_image" name="profile_image"><br>
 
     <%-- Display the current profile image if available --%>
     <% if (user.getProfileImage() != null && !user.getProfileImage().isEmpty()) { %>
-    <img src="<%= request.getContextPath() + "/images/" + user.getProfileImage() %>" alt="Profile Image" width="100">
+<%--    <img src="<%= request.getContextPath() + "/" + user.getProfileImage() %>" alt="Profile Image" width="100">--%>
+    <img src="<%= request.getContextPath() + "/img/user1.png"%>" alt="Profile Image" width="100">
     <% } %>
 
     <br><br>

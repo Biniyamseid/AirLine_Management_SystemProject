@@ -23,7 +23,6 @@ public class DBConnector {
             System.out.println("error has occured");
             System.out.println(e);
         }
-        System.out.println("at 11 first step");
         return connection;
     }
     public static Connection getConnectionInit(){

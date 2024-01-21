@@ -4,7 +4,8 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
-<!--        <servlet>-->
+
+    <!--        <servlet>-->
 <!--            <servlet-name>search_flight_by_id</servlet-name>-->
 <!--            <servlet-class>com.sami.airline_management_system.servlet.search_flight_by_id</servlet-class>-->
 <!--        </servlet>-->

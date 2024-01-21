@@ -56,9 +56,11 @@
 <h2>User Profile</h2>
 
 <div class="card">
+
     <%-- Display the current profile image if available --%>
-    <% if (user.getProfileImage() != null && !user.getProfileImage().isEmpty()) { %>
-    <img src="<%= request.getContextPath() + "/images/" + user.getProfileImage() %>" alt="Profile Image" style="width: 100%">
+    <% if ((user != null) && user.getProfileImage() != null && !user.getProfileImage().isEmpty()) { %>
+<%--    <img src="<%= request.getContextPath() + "/img/" + user.getProfileImage() %>" alt="Profile Image" style="width: 100%">--%>
+        <img src="<%= "/AirLine_Management_SystemProject_war/img/" + User.getProfileImage() %>" alt="Profile Image" style="width: 100%">
     <% } %>
     <%
         } else {

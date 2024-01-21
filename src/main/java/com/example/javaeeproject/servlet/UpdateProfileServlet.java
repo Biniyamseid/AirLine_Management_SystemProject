@@ -45,16 +45,17 @@ public class UpdateProfileServlet extends HttpServlet {
                 if (filePart != null && filePart.getSize() > 0) {
                     // Save the image file and update the user's profileImage field
                     String imagePath = saveProfileImage(username, filePart);
+                    System.out.println(imagePath);
                     user.setProfileImage(imagePath);
                 }
 
                 userDao.updateUser(user);
 
                 // Redirect to a page after successful update
-                response.sendRedirect("profile.jsp");
+                response.sendRedirect("profile");
             } else {
                 // Handle the case where the user does not exist
-                response.sendRedirect("error.jsp");
+                response.sendRedirect("error");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -64,13 +65,45 @@ public class UpdateProfileServlet extends HttpServlet {
     }
 
     // Method to save the profile image file
+//    private String saveProfileImage(String username, Part filePart) throws IOException {
+//        String fileName = username + "_" + System.currentTimeMillis() + "_" + getFileName(filePart);
+//        String imagePath = getServletContext().getRealPath("/img/") + fileName;
+//        System.out.println(imagePath);
+//        try{
+//            filePart.write(imagePath);
+//            System.out.println("file is written successfully");
+//            return fileName;
+//
+//
+//        }catch (Exception e){
+//            System.out.println(e);
+//            e.printStackTrace();
+//
+//        }
+//
+//        return fileName;
+//    }
+
     private String saveProfileImage(String username, Part filePart) throws IOException {
         String fileName = username + "_" + System.currentTimeMillis() + "_" + getFileName(filePart);
-        String imagePath = getServletContext().getRealPath("/images/") + fileName;
 
-        filePart.write(imagePath);
-        return fileName;
+        // Check file size
+        if (filePart.getSize() > 0 && filePart.getSize() <= (1024 * 1024 * 2)) {
+            String imagePath = "/home/stationone/Documents/school projects/final exam week projects/AirLine_Management_SystemProject/src/main/webapp/img/" + fileName;
+            try {
+                filePart.write(imagePath);
+                System.out.println("File is written successfully");
+                return fileName;
+            } catch (IOException e) {
+                System.out.println("Error writing file: " + e.getMessage());
+                throw e; // Rethrow the exception for better handling
+            }
+        } else {
+            System.out.println("Invalid file size");
+            throw new IOException("Invalid file size");
+        }
     }
+
 
     // Method to extract file name from HTTP header content-disposition
     private String getFileName(Part part) {

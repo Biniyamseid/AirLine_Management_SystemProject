@@ -93,7 +93,7 @@ public class UserDao {
     public void updateUser(User user) throws SQLException {
         try (Connection connection = DBConnector.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(
-                     "UPDATE user_details SET fullname = ?, password = ?, email_address = ?, state = ?, city = ?, pincode = ?, profileImage = ? WHERE username = ?")) {
+                     "UPDATE user_details SET fullname = ?, password = ?, email_address = ?, state = ?, city = ?, pincode = ?, profile_image = ? WHERE username = ?")) {
 
             pstmt.setString(1, User.getFullName());
             pstmt.setString(2, user.getPassword());
